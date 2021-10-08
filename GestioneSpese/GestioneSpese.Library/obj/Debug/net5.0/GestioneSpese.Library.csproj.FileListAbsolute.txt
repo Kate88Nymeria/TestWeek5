@@ -1,0 +1,12 @@
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\bin\Debug\net5.0\GestioneSpese.Library.deps.json
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\bin\Debug\net5.0\GestioneSpese.Library.dll
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\bin\Debug\net5.0\ref\GestioneSpese.Library.dll
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\bin\Debug\net5.0\GestioneSpese.Library.pdb
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.csproj.AssemblyReference.cache
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.AssemblyInfoInputs.cache
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.AssemblyInfo.cs
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.csproj.CoreCompileInputs.cache
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.dll
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\ref\GestioneSpese.Library.dll
+C:\Users\katia.caracciolo\Desktop\Projects\Week5\GestioneSpese\GestioneSpese.Library\obj\Debug\net5.0\GestioneSpese.Library.pdb
