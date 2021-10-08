@@ -26,7 +26,10 @@ namespace GestioneSpese
                 Console.WriteLine("[ 4 ] - Visualizza Elenco Spese Approvate");
                 Console.WriteLine("[ 5 ] - Visualizza Elenco Spese di un Utente");
                 Console.WriteLine("[ 6 ] - Visualizza Totale Spese per Categoria");
-                Console.WriteLine("[ 7 ] - Usa Ado.Net Connected Mode");
+                Console.WriteLine();
+                Console.WriteLine("[ 7 ] - Usa Ado.Net Connected Mode (NON TERMINATO)");
+                Console.WriteLine("[ 8 ] - Usa Ado.Net Disconnected Mode (NON TERMINATO)");
+                Console.WriteLine();
                 Console.WriteLine("[ 0 ] - Esci");
 
                 scelta = Helpers.CheckInt();
@@ -65,6 +68,11 @@ namespace GestioneSpese
                         break;
                     case 7:
                         AdoNetConnectedMode();
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
+                    case 8:
+                        AdoNetDisconnectedMode();
                         Helpers.ContinuaEsecuzione();
                         Console.Clear();
                         break;
@@ -108,6 +116,54 @@ namespace GestioneSpese
                     //    Helpers.ContinuaEsecuzione();
                     //    Console.Clear();
                     //    break;
+                    case 0:
+                        Console.WriteLine();
+                        continuare = false;
+                        break;
+                    default:
+                        Console.WriteLine("Errore: Scelta non ammessa");
+                        break;
+                }
+
+            } while (continuare);
+        }
+
+        public static void AdoNetDisconnectedMode()
+        {
+            Console.Clear();
+            Console.WriteLine("========== ADO.NET DISCONNECTED MODE ==========");
+
+            DisconnectedMode.PopolaDataSet();
+
+            int scelta;
+            bool continuare = true;
+
+            do
+            {
+                Console.WriteLine("[ 1 ] - Visualizza Elenco Spese");
+                //Console.WriteLine("[ 2 ] - Inserisci Nuova Spesa");
+                Console.WriteLine("[ 3 ] - Aggiorna Database");
+                Console.WriteLine("[ 0 ] - Esci");
+
+                scelta = Helpers.CheckInt();
+
+                switch (scelta)
+                {
+                    case 1:
+                        DisconnectedMode.StampaListaSpese();
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
+                    case 2:
+                        //DisconnectedMode.InserisciNuovaSpesa(); //DA TERMINARE
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        DisconnectedMode.AggiornaDatabase();
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
                     case 0:
                         Console.WriteLine();
                         continuare = false;
