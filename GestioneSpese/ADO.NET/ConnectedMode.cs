@@ -128,5 +128,52 @@ namespace GestioneSpese.ADO.NET
         //        conn.Close();
         //    }
         //}
+
+        public static void EliminaSpesa()
+        {
+            using SqlConnection conn = new SqlConnection(connectionStringSQL);
+
+            try
+            {
+                Console.WriteLine("Attendere prego...");
+                conn.Open();
+
+                if (conn.State != ConnectionState.Open)
+                {
+                    Console.WriteLine("Non connesso al database");
+                    return;
+                }
+
+                string querySql = "DELETE FROM Spese " +
+                                  "WHERE Id = @Id";
+
+                int idSpesa = Forms.RimuoviSpesa();
+
+                SqlCommand deleteCommand = new SqlCommand(querySql, conn);
+                deleteCommand.CommandType = CommandType.Text;
+
+                SqlParameter idParam = new SqlParameter();
+                idParam.ParameterName = "@Id";
+                idParam.Value = idSpesa;
+                idParam.DbType = DbType.Int32;
+                deleteCommand.Parameters.Add(idParam);
+
+                int result = deleteCommand.ExecuteNonQuery();
+
+                if (result != 1)
+                    Console.WriteLine("Errore: Spesa non eliminata");
+                else
+                    Console.WriteLine("Spesa eliminata con successo");
+
+            }
+            catch (SqlException ex)
+            {
+                Console.WriteLine($"Errore Sql: {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

@@ -68,12 +68,10 @@ namespace GestioneSpese
                         break;
                     case 7:
                         AdoNetConnectedMode();
-                        Helpers.ContinuaEsecuzione();
                         Console.Clear();
                         break;
                     case 8:
                         AdoNetDisconnectedMode();
-                        Helpers.ContinuaEsecuzione();
                         Console.Clear();
                         break;
                     case 0:
@@ -100,6 +98,7 @@ namespace GestioneSpese
             {
                 Console.WriteLine("[ 1 ] - Visualizza Elenco Spese");
                 //Console.WriteLine("[ 2 ] - Inserisci Nuova Spesa");
+                Console.WriteLine("[ 3 ] - Cancella Spesa Esistente");
                 Console.WriteLine("[ 0 ] - Esci");
 
                 scelta = Helpers.CheckInt();
@@ -116,6 +115,13 @@ namespace GestioneSpese
                     //    Helpers.ContinuaEsecuzione();
                     //    Console.Clear();
                     //    break;
+                    case 3:
+                        ConnectedMode.StampaListaSpese();
+                        Console.WriteLine();
+                        ConnectedMode.EliminaSpesa();
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
                     case 0:
                         Console.WriteLine();
                         continuare = false;
@@ -142,7 +148,8 @@ namespace GestioneSpese
             {
                 Console.WriteLine("[ 1 ] - Visualizza Elenco Spese");
                 //Console.WriteLine("[ 2 ] - Inserisci Nuova Spesa");
-                Console.WriteLine("[ 3 ] - Aggiorna Database");
+                Console.WriteLine("[ 3 ] - Cancella Spesa Esistente");
+                Console.WriteLine("[ 4 ] - Aggiorna Database");
                 Console.WriteLine("[ 0 ] - Esci");
 
                 scelta = Helpers.CheckInt();
@@ -160,6 +167,13 @@ namespace GestioneSpese
                         Console.Clear();
                         break;
                     case 3:
+                        DisconnectedMode.StampaListaSpese();
+                        Console.WriteLine();
+                        DisconnectedMode.EliminaSpesa();
+                        Helpers.ContinuaEsecuzione();
+                        Console.Clear();
+                        break;
+                    case 4:
                         DisconnectedMode.AggiornaDatabase();
                         Helpers.ContinuaEsecuzione();
                         Console.Clear();

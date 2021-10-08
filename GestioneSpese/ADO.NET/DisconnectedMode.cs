@@ -105,6 +105,14 @@ namespace GestioneSpese.ADO.NET
         //    speseDs.Tables["Spese"].Rows.Add(newRow);
         //}
 
+        public static void EliminaSpesa()
+        {
+            int idSpesa = Forms.RimuoviSpesa();
+
+            DataRow rowToDelete = speseDs.Tables["Spese"].Rows.Find(idSpesa);
+            rowToDelete?.Delete();
+        }
+
         public static void AggiornaDatabase()
         {
             Console.WriteLine("Attendere prego...");
